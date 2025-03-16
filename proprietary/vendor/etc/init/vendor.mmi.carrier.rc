@@ -1,5 +1,7 @@
 on fs && property:ro.boot.carrier=amxmx
     setprop persist.vendor.radio.suppress_ussd_rel 1
+    setprop ro.setupwizard.require_network any
+    setprop ro.setupwizard.user_req_network any
 
 on fs && property:ro.boot.carrier=reteu
     setprop persist.vendor.radio.suppress_ussd_rel 1
@@ -21,43 +23,39 @@ on fs && property:ro.boot.carrier=retca
 
 on fs && property:ro.boot.carrier=tracfone
     setprop ro.build.tf_modelnumber ${ro.boot.hardware.sku}
-
-on property:ro.build.display.id=* && property:ro.boot.carrier=tracfone
     setprop ro.build.sw_version ${ro.build.display.id}
 
 on fs && property:ro.boot.carrier=att
     setprop persist.vendor.ims.dropset_feature 0
     setprop ro.mot.enable_att_messaging_ps_feature true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs_att true
 
 on fs && property:ro.boot.carrier=attpre
     setprop persist.vendor.ims.dropset_feature 0
     setprop ro.mot.enable_att_messaging_ps_feature true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs_att true
 
 on fs && property:ro.boot.carrier=cricket
     setprop persist.vendor.ims.dropset_feature 0
     setprop ro.mot.enable_att_messaging_ps_feature true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs_att true
 
 on fs && property:ro.boot.carrier=tmo
     setprop ro.mot.enable_tmo_messaging_ps_feature true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs_up true
 
 on fs && property:ro.boot.carrier=metropcs
     setprop ro.mot.enable_tmo_messaging_ps_feature true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs true
-    setprop ro.mot.enable_summit_rcs_ps_feature_mtkrcs_up true
 
-on fs && property:ro.boot.carrier=vzw
-    setprop persist.vendor.rcs.singlereg.feature 0
-    setprop persist.rcs.supported 1
+on fs && property:ro.boot.carrier=amxcl
+    setprop ro.setupwizard.require_network any
+    setprop ro.setupwizard.user_req_network any
 
-on fs && property:ro.boot.carrier=vzwpre
-    setprop persist.vendor.rcs.singlereg.feature 0
-    setprop persist.rcs.supported 1
+on fs && property:ro.boot.carrier=amxla
+    setprop ro.setupwizard.require_network any
+    setprop ro.setupwizard.user_req_network any
+
+on fs && property:ro.boot.carrier=amxpe
+    setprop ro.setupwizard.require_network any
+    setprop ro.setupwizard.user_req_network any
+
+on fs && property:ro.boot.carrier=amxco
+    setprop ro.setupwizard.require_network any
+    setprop ro.setupwizard.user_req_network any
 
