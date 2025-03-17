@@ -206,6 +206,7 @@ PRODUCT_PACKAGES += \
     libtfestriping \
     libvidhance \
     vendor.egistec.hardware.fingerprint@2.0 \
+    android.hardware.biometrics.fingerprint@2.1.so \
     android.hardware.biometrics.fingerprint@2.1-service-ets \
     android.hardware.biometrics.fingerprint@2.1-service-fpc \
     fpc_ident \
