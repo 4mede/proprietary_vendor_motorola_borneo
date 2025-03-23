@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
     libvidhance \
     vendor.egistec.hardware.fingerprint@2.0 \
     android.hardware.biometrics.fingerprint@2.1.so \
+    com.motorola.hardware.biometric.fingerprint@1.0.so \
     android.hardware.biometrics.fingerprint@2.1-service-ets \
     android.hardware.biometrics.fingerprint@2.1-service-fpc \
     fpc_ident \

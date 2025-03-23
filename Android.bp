@@ -7,6 +7,7 @@ soong_namespace {
         "vendor/motorola/sm6225-common",
         "hardware/motorola",
         "vendor/qcom/common/vendor/perf",
+        "vendor/qcom/common/vendor/media-legacy"
     ],
 }
 
@@ -3423,6 +3424,33 @@ cc_prebuilt_binary {
     },
     prefer: true,
     relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "com.motorola.hardware.biometric.fingerprint",
+    owner: "motorola",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/com.motorola.hardware.biometric.fingerprint@1.0.so",
+            ],
+            shared_libs: [
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/com.motorola.hardware.biometric.fingerprint@1.0.so",
+            ],
+            shared_libs: [
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }
 
