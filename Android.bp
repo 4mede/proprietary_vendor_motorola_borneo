@@ -10,6 +10,28 @@ soong_namespace {
     ],
 }
 
+android_app_import {
+ 	name: "FMRadioService",
+ 	owner: "motorola",
+ 	apk: "proprietary/system_ext/app/FMRadioService/FMRadioService.apk",
+ 	certificate: "platform",
+ 	dex_preopt: {
+ 		enabled: false,
+ 	},
+ 	product_specific: true,
+ }
+ 
+ android_app_import {
+ 	name: "FMPlayer",
+ 	owner: "motorola",
+ 	apk: "proprietary/product/priv-app/FMPlayer/FMPlayer.apk",
+ 	certificate: "platform",
+ 	dex_preopt: {
+ 		enabled: false,
+ 	},
+ 	product_specific: true,
+ }
+
 cc_prebuilt_library_shared {
     name: "libthermalclient",
     owner: "motorola",
